@@ -1,1 +1,15 @@
-<ion-nav [root]="rootPage"></ion-nav>
+
+<ion-menu [content] = "content">
+    <ion-toolbar>
+        <ion-title>Elite Shcedule</ion-title>
+    </ion-toolbar>
+
+    <ion-content>
+        <ion-list>
+            <ion-list-header>Navigate</ion-list-header>
+            <button menuClose ion-item (click)="goHome()">Home</button>
+            <button menuClose ion-item (click)="goTournaments()">Find a Tournaments</button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
